@@ -1,0 +1,17 @@
+<table class="table-bordered" style="width: 92%">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody class="bordered">
+    <tr *ngFor="let opt of data">
+      <td>{{ opt.year }}</td>
+      <td>{{ opt.month }}</td>
+      <td>{{ opt.price }}</td>
+    </tr>
+  </tbody>
+</table>

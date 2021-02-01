@@ -1,0 +1,31 @@
+<div class="main_container">
+  <h2 class="text-center">Parent Component</h2>
+  <div class="header">
+    <div class="year">
+      Year dropdown:
+      <select [value]="year" (change)="changeYear($event)">
+        <option *ngFor="let opt of years" [value]="opt">
+          {{ opt }}
+        </option>
+      </select>
+    </div>
+
+    <div class="month">
+      Month dropdown:
+      <select [value]="month" (change)="changeMonth($event)">
+        <option *ngFor="let opt of months" [value]="opt">
+          {{ opt }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filteredTables">
+    <div class="child1">
+      <app-child1 [year]="year" [month]="month" table="table1"></app-child1>
+    </div>
+    <div class="child2">
+      <app-child1 [year]="year" [month]="month" table="table2"></app-child1>
+    </div>
+  </div>
+</div>
